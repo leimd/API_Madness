@@ -1,0 +1,15 @@
+html{
+background-color:#C8D3E6;
+}
+
+#search_area{
+	margin-left: 25%;
+	margin-top: 25%;
+	width:50%;
+	height:25%;
+}
+
+input{
+height: 2em;
+width:20em;
+}

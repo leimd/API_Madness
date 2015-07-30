@@ -2,25 +2,31 @@
 <head>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src="app.js"> </script> 
-</hed> 
+	<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/latest/css/bootstrap.css" />
+	 <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+	 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+	 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link href="app.css" rel="stylesheet">
+	<script src="finance.js"> </script> 
+</head> 
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-				<button class='btn btn-primary' id='get_instgram' > Instgram </button> 
-				<button class='btn btn-warning' id='stop_timer' > Stop timer</button> 
+	<br/>
+	<label for='ticker' > Ticker </label> 
+	<input type="text" class='input-lg' id='ticker' style='left: 50%' placeholder='msft' value='msft' >
 
-				<img src="" class="img-responsive" id='instagram_img' alt="Responsive image">
-				<div id='img_info'>
-					<h2> </h2> 
-					<a href='#'>Original Link </a> 
-				
-					</div> 
-			</div> 
-		</div> 
-	</div> 
+<input	type='text' id='daterange' name="daterange" value="" />
+	
+	<script type="text/javascript">
+		$(function() {
+				$('input[name="daterange"]').daterangepicker({ locale: { format: 'YYYY-MM-DD' }},function(start,end){
+						start_date = start.format("YYYY-MM-DD");
+						end_date = end.format("YYYY-MM-DD");
+						});
+				});
+			</script>
+	<button id='find' class='btn btn-primary'> Get it </button> 
+	<p> Please make sure you have selected some date </p> 
+	<div id="linechart_material"></div>
+
 </body>
-
