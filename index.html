@@ -12,11 +12,11 @@
 </head> 
 <body>
 	<br/>
+	<div class="center">
 	<label for='ticker' > Ticker </label> 
-	<input type="text" class='input-lg' id='ticker' style='left: 50%' placeholder='msft' value='msft' >
+	<input type="text" class='input' id='ticker' style='left: 50%' placeholder='msft' value='msft' width="5em" >
 
-<input	type='text' id='daterange' name="daterange" value="" />
-	
+<input	type='text' id='daterange' name="daterange" value="" style="width:15em;" />
 	<script type="text/javascript">
 		$(function() {
 				$('input[name="daterange"]').daterangepicker({ locale: { format: 'YYYY-MM-DD' }},function(start,end){
@@ -26,7 +26,8 @@
 				});
 			</script>
 	<button id='find' class='btn btn-primary'> Get it </button> 
-	<p> Please make sure you have selected some date </p> 
+	</div> 
+	<p align='center' style='color:red;'> Please make sure you have selected some date BY YOURSELF </p> 
 	<div id="linechart_material"></div>
 
 </body>

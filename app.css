@@ -11,5 +11,11 @@ background-color:#C8D3E6;
 
 input{
 height: 2em;
-width:20em;
+}
+
+.center{
+margin-left:30%;
+display:inline;
+
+
 }
